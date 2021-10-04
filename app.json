@@ -1,0 +1,56 @@
+{
+    "name": "slam-mirrorbot",
+    "description": "A Telegram bot for all your mirror needs",
+    "logo": "https://telegra.ph/file/6507910fd06d18dfaba82.jpg",
+    "keywords": [
+      "bot",
+      "telegram",
+      "python"
+    ],
+    "repository": "https://github.com/julia362x/JBond1",
+    "website": "https://github.com/julia362x/JBond1",
+    "success_url": "https://github.com/julia362x/JBond1",
+    "stack": "container",
+    "env": {
+      "ENV": {
+        "description": "Setting this to ANYTHING will enable Webhooks when in env mode",
+        "value": "ANYTHING"
+      },
+      "BOT_TOKEN": {
+        "description": "The Telegram bot token that you get from @BotFather.",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "Your Heroku API key, get it from https://dashboard.heroku.com/account.",
+        "required": true
+      },
+      "HEROKU_APP_NAME": {
+        "description": "Add the Heroku app name here.",
+        "required": true
+       },
+      "TOKEN_PICKLE_URL": {
+        "description": "(Optional) Only if you want to load your token.pickle externally from an index link. Fill this with the direct link of that file.",
+        "required": false
+      },
+      "ACCOUNTS_ZIP_URL": {
+        "description": "(Optional) Only if you want to load your service accs externally from an index link. Archive your service accs json files to a zip file directly (don't archive the accounts folder. Select all the jsons inside and zip them only instead. Name the zip file with whatever you want, it doesn't matter). Fill this with the direct link of that file.",
+        "required": false
+      },
+      "BASE_URL_OF_BOT": {
+        "description": "Enter your Heroku app link to avoid the app from sleeping and to make it work with Torrent selection",
+        "value": "https://.herokuapp.com",
+        "required": true
+      }
+    },
+    "addons": [
+      {
+        "plan": "heroku-postgresql"
+      }
+    ],
+    "formation": {
+            "web": {
+                "quantity": 1,
+                "size": "free"
+            }
+      }
+}
